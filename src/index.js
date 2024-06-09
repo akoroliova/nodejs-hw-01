@@ -1,3 +1,3 @@
-import path from 'node:path';
+import { generateContacts } from './scripts/generateContacts.js';
 
-export const workdir = path.join(process.cwd());
+generateContacts(5);
