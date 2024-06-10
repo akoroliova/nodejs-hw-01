@@ -23,7 +23,7 @@ export const thanos = async () => {
       'utf8',
     );
   } catch (error) {
-    console.error('Error removing contacts with probability:', error);
+    throw new Error(error);
   }
 };
 

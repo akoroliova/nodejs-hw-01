@@ -19,13 +19,8 @@ export const addOneContact = async () => {
     contacts = contacts.concat(newContacts);
 
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), 'utf8');
-    const message =
-      contacts.length === newContacts.length
-        ? 'Дані успішно записані у пустий файл.'
-        : 'Дані успішно додані у файл.';
-    console.log(message);
   } catch (error) {
-    console.error('Помилка читання або запису файлу:', error);
+    throw new Error(error);
   }
 };
 await addOneContact();

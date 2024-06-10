@@ -14,7 +14,7 @@ export const countContacts = async () => {
     const count = contacts.length;
     return count;
   } catch (error) {
-    console.error('Помилка читання файлу або парсингу даних:', error);
+    throw new Error(error);
   }
 };
 

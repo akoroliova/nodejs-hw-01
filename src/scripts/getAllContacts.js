@@ -12,7 +12,7 @@ export const getAllContacts = async () => {
     }
     return data;
   } catch (err) {
-    console.error('Read file error:', err);
+    throw new Error(err);
   }
 };
 

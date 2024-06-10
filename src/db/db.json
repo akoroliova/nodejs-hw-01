@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "Mr. Simon Ratke",
+    "phone": "1-695-489-8215 x1655",
+    "email": "Minerva.Reilly47@yahoo.com",
+    "job": "Investor Intranet Producer"
+  },
+  {
+    "name": "Kari Nitzsche",
+    "phone": "1-713-711-2726 x18228",
+    "email": "Trevion.Abshire@hotmail.com",
+    "job": "Future Directives Supervisor"
+  },
+  {
+    "name": "Ron Herzog",
+    "phone": "1-892-474-0067 x2227",
+    "email": "Grayson_Goyette@gmail.com",
+    "job": "Investor Web Technician"
+  },
+  {
+    "name": "Darryl Wisoky",
+    "phone": "377-536-5316 x935",
+    "email": "Mathew.Jones@yahoo.com",
+    "job": "Dynamic Accounts Consultant"
+  },
+  {
+    "name": "Phil Ankunding",
+    "phone": "658.504.7765 x0538",
+    "email": "Malcolm49@hotmail.com",
+    "job": "Direct Quality Engineer"
+  }
+]
