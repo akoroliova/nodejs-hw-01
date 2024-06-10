@@ -1,9 +1,30 @@
+import fs from 'node:fs/promises';
 import { PATH_DB } from '../constants/contacts.js';
 
-// Для отримання вірогідності 50 відсотків (потрібно для написання скрипта thanos) можна скористатись виразом Math.random() >= 0.5
+export const thanos = async () => {
+  try {
+    const data = await fs.readFile(PATH_DB, 'utf8');
+    if (!data) {
+      throw new Error('File is empty');
+    }
+    const contacts = JSON.parse(data);
+    if (!Array.isArray(contacts)) {
+      throw new Error('Invalid data format');
+    }
 
-export const thanos = async () => {};
+    const updatedContacts = contacts.filter(() => {
+      const shouldDelete = Math.random() >= 0.5;
+      return !shouldDelete;
+    });
+
+    await fs.writeFile(
+      PATH_DB,
+      JSON.stringify(updatedContacts, null, 2),
+      'utf8',
+    );
+  } catch (error) {
+    console.error('Error removing contacts with probability:', error);
+  }
+};
 
 await thanos();
-
-//Функції в файлах скриптів - асинхронні.
